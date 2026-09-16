@@ -43,6 +43,7 @@ const cards = [
   {
     src: "/videos/f1.mp4",
     rotation: "rotate-z-[-10deg]",
+    rotationDeg: -10,
     name: "Madison",
     img: "/images/p1.png",
     translation: "translate-y-[-5%]",
@@ -50,12 +51,14 @@ const cards = [
   {
     src: "/videos/f2.mp4",
     rotation: "rotate-z-[4deg]",
+    rotationDeg: 4,
     name: "Alexander",
     img: "/images/p2.png",
   },
   {
     src: "/videos/f3.mp4",
     rotation: "rotate-z-[-4deg]",
+    rotationDeg: -4,
     name: "Andrew",
     img: "/images/p3.png",
     translation: "translate-y-[-5%]",
@@ -63,6 +66,7 @@ const cards = [
   {
     src: "/videos/f4.mp4",
     rotation: "rotate-z-[4deg]",
+    rotationDeg: 4,
     name: "Bryan",
     img: "/images/p4.png",
     translation: "translate-y-[5%]",
@@ -70,12 +74,14 @@ const cards = [
   {
     src: "/videos/f5.mp4",
     rotation: "rotate-z-[-10deg]",
+    rotationDeg: -10,
     name: "Chris",
     img: "/images/p5.png",
   },
   {
     src: "/videos/f6.mp4",
     rotation: "rotate-z-[4deg]",
+    rotationDeg: 4,
     name: "Devante",
     img: "/images/p6.png",
     translation: "translate-y-[5%]",
@@ -83,6 +89,7 @@ const cards = [
   {
     src: "/videos/f7.mp4",
     rotation: "rotate-z-[-3deg]",
+    rotationDeg: -3,
     name: "Melisa",
     img: "/images/p7.png",
     translation: "translate-y-[10%]",
