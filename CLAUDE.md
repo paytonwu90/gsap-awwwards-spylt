@@ -35,6 +35,10 @@ public/
   images/, videos/  # 素材（從教學 GitHub repo 取得）
 ```
 
+## 部署
+
+部署在 Vercel，透過 GitHub App 與此 repo 整合。push 到 `main` 會自動觸發正式環境（Production）部署，正式網址為 `gsap-awwwards-spylt.vercel.app`；push 其他分支或開 PR 則會建立獨立的 Preview 部署，不影響正式網址。
+
 ## 樣式與 GSAP 開發規格
 
 詳細的樣式慣例、GSAP（`useGSAP`/`ScrollTrigger`/`ScrollSmoother`/`SplitText`）使用規則、clip-path 揭露動畫原理、響應式斷點、資料驅動元件寫法、教學進度 checklist，都寫在 `docs/CONVENTIONS.md`。實作對應功能時才需要讀，不常駐在這裡。
