@@ -34,11 +34,13 @@ const FooterSection = () => {
               autoPlay
               playsInline
               muted
-              className="absolute top-0 object-contain mix-blend-lighten"
+              className="absolute top-0 w-full object-contain mix-blend-lighten"
             />
           )
         }
 
+        {/* relative 是為了在疊放順序上贏過前面 absolute 定位的 video/img，
+            不然這裡的內容預設會被蓋在它們下面（沒有定位的元素必輸給有定位的元素）。 */}
         <div className="relative flex-center gap-5 z-10 mt-5 md:mt-20">
           <div className="social-btn">
             <img src="/images/yt.svg" alt="youtube" />
@@ -51,7 +53,8 @@ const FooterSection = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between font-paragraph md:text-lg font-medium text-milk gap-10 mt-40 px-5 md:px-10">
+        {/* 同上，relative 是為了贏過 video/img 的疊放順序，不是用來做位移。 */}
+        <div className="relative flex flex-col md:flex-row justify-between font-paragraph md:text-lg font-medium text-milk gap-10 mt-40 xl:mt-32 px-5 md:px-10">
           <div className="flex items-center gap-5 md:gap-16">
             <div>
               <p>SPYLT Flavors</p>
