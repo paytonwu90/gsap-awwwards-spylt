@@ -52,7 +52,10 @@ const HeroSection = () => {
           className="absolute bottom-0 left-1/2 -translate-x-1/2 object-auto scale-100 md:scale-150"
         />
         <div className="hero-content opacity-0">
-          <div className="overflow-hidden">
+          {/* shrink-0：這層有 overflow-hidden，flex 子項目加上 overflow-hidden
+              後會失去「不被壓縮過小」的預設保護，空間不夠時可能被壓到 0 高度，
+              導致標題整個消失。shrink-0 強制它保持原本該有的高度。 */}
+          <div className="overflow-hidden shrink-0">
             <h1 className="hero-title">Freaking Delicious</h1>
           </div>
           <div
