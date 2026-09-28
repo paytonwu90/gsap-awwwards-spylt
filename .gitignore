@@ -24,3 +24,8 @@ Build an Awwwards-winning Website on your First Try using React, TailwindCss, an
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
+.env*
+
+.playwright-mcp/
