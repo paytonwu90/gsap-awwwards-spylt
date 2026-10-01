@@ -4,8 +4,6 @@
 - `Build an Awwwards-winning Website on your First Try using React, TailwindCss, and GSAP (整理版).md`（結構化中文整理，優先參考這份）
 - `Build an Awwwards-winning Website on your First Try using React, TailwindCss, and GSAP.txt`（原始逐字稿）
 
-> 目前專案尚未 scaffold（沒有 `package.json` / `src`）。本檔案先依教學內容記錄預期的技術棧與架構慣例，作為後續開發的依循依據；實際建立專案後應回頭校正本檔案內容（例如指令、資料夾路徑是否與實作一致）。
-
 ## 技術棧
 
 - **建置工具**：Vite（React + JavaScript，非 TypeScript）
@@ -16,11 +14,14 @@
   - GSAP 外掛：`ScrollTrigger`、`ScrollSmoother`、`SplitText`
 - **響應式邏輯**：`react-responsive`（`useMediaQuery`），用於 CSS media query 無法表達的 JS 邏輯分支（例如平板/手機切換不同動畫或素材）
 
-## 開發指令（scaffold 後補上實際指令）
+## 開發指令
 
 ```bash
 npm install
-npm run dev
+npm run dev       # 開發伺服器
+npm run build     # 正式打包
+npm run preview   # 預覽打包結果
+npm run lint      # oxlint
 ```
 
 ## 資料夾結構慣例
@@ -29,7 +30,7 @@ npm run dev
 src/
   components/   # 可重複使用的元件（Navbar、ClipPathTitle、VideoPinSection 等）
   sections/     # 各頁面區塊（HeroSection、MessageSection、FlavorSection...）
-  constants/    # 靜態資料（flavorLists、nutrientList、testimonialLists 等），搭配 .map() 渲染，不手寫重複 JSX
+  constants/    # 靜態資料（flavorlists、nutrientLists、cards 等），搭配 .map() 渲染，不手寫重複 JSX
 public/
   fonts/        # Proxima Nova 等自行放置的字型
   images/, videos/  # 素材（從教學 GitHub repo 取得）
