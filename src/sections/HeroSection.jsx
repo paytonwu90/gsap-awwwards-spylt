@@ -1,8 +1,12 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { SplitText } from "gsap/SplitText"
+import { useMediaQuery } from "react-responsive"
 
 const HeroSection = () => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isTabletOrBelow = useMediaQuery({ maxWidth: 1024 });
+
   useGSAP(() => {
     const titleSplit = SplitText.create(".hero-title", {
       type: "chars"
@@ -46,11 +50,32 @@ const HeroSection = () => {
   return (
     <section className="bg-main-bg">
       <div className="hero-container">
-        <img
-          src="/images/static-img.png"
-          alt="Hero"
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 object-auto scale-100 md:scale-150"
-        />
+        {
+          isTabletOrBelow ? (
+            <>
+              { isMobile && (
+                <img
+                  src="/images/hero-bg.png"
+                  alt="Hero"
+                  className="absolute bottom-40 size-full object-cover"
+                />
+              )}
+              <img
+                src="/images/hero-img.png"
+                alt="Hero"
+                className="absolute bottom-0 left-1/2 -translate-x-1/2"
+              />
+            </>
+          ) : (
+            <video
+              src="/videos/hero-bg.mp4"
+              autoPlay
+              muted
+              playsInline
+              className="absolute inset-0 size-full object-cover"
+            />
+          )
+        }
         <div className="hero-content opacity-0">
           {/* shrink-0：這層有 overflow-hidden，flex 子項目加上 overflow-hidden
               後會失去「不被壓縮過小」的預設保護，空間不夠時可能被壓到 0 高度，
